@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button, Alert } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -9,6 +9,13 @@ export default function HomeScreen() {
 
       <Text> React Native </Text>
 
+      <View>
+        <Text style={styles.buttonArea}></Text>
+        <Button
+        title = "Clique Aqui"
+        onPress={() => Alert.alert("Parabéns", "O botão funcionou!")}
+        />
+      </View>
     </View>
 
   );
@@ -27,5 +34,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000000"
   },
+
+  buttonArea: {
+    marginTop: 20, 
+    width: 20,
+    color: "#FFB6C1"
+  }
 
 });
